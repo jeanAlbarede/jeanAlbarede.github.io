@@ -1,27 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Jean's Engineering Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean | Engineering Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Jean - Electrical Engineering @ Purdue</h1>
+<body class="min-h-screen bg-white text-gray-900">
 
-    <p>FPGA | DSP | ASIC | Embedded Systems</p>
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-3 gap-12 items-center">
 
-    <h2>Projects</h2>
+      <div class="md:col-span-2 space-y-6">
 
-    <ul>
-        <li>
-            <a href="https://github.com/yourusername/fpga-audio-effects">
-                FPGA Audio Effects Processor
-            </a>
-        </li>
+        <div>
+          <h1 class="text-5xl font-bold tracking-tight">Jean</h1>
+          <p class="text-xl text-gray-600 mt-3">
+            Electrical Engineering Student @ Purdue University
+          </p>
+        </div>
 
-        <li>
-            <a href="https://github.com/yourusername/fpga-scoreboard">
-                FPGA Basketball Game Controller
-            </a>
-        </li>
-    </ul>
+        <p class="text-lg leading-relaxed text-gray-700 max-w-2xl">
+          Focused on FPGA design, DSP, RTL systems, embedded hardware,
+          semiconductor technologies, and high-performance digital systems.
+        </p>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#projects"
+             class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
+            View Projects
+          </a>
+
+          <a href="https://github.com"
+             class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+            GitHub
+          </a>
+
+          <a href="https://linkedin.com"
+             class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="w-64 h-64 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-lg shadow-lg">
+          Profile Photo
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+
+      <h2 class="text-3xl font-bold mb-8">Technical Interests</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
+          <h3 class="font-semibold text-xl mb-4">Digital Design</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Verilog/SystemVerilog</li>
+            <li>• RTL Design</li>
+            <li>• FSMs</li>
+            <li>• Timing Analysis</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
+          <h3 class="font-semibold text-xl mb-4">FPGA & Embedded</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Vivado</li>
+            <li>• PCB Integration</li>
+            <li>• UART/SPI</li>
+            <li>• Hardware Debugging</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
+          <h3 class="font-semibold text-xl mb-4">Signal Processing</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• DSP</li>
+            <li>• Fixed-Point Arithmetic</li>
+            <li>• Filters</li>
+            <li>• Real-Time Systems</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="border-t border-gray-200 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+
+      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+
+      <div class="grid gap-8">
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+
+            <div class="space-y-4">
+              <h3 class="text-2xl font-semibold">FPGA Audio Effects Processor</h3>
+
+              <p class="text-gray-700 leading-relaxed max-w-3xl">
+                Real-time audio processing system implemented on FPGA hardware using Verilog and fixed-point DSP pipelines.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">FPGA</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Verilog</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">DSP</span>
+              </div>
+            </div>
+
+            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
+              View Project
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+
+            <div class="space-y-4">
+              <h3 class="text-2xl font-semibold">FPGA Basketball Game Controller</h3>
+
+              <p class="text-gray-700 leading-relaxed max-w-3xl">
+                Custom FPGA + PCB-based basketball scoreboard system with seven-segment displays, game timing, and buzzer logic.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">FPGA</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Embedded</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PCB</span>
+              </div>
+            </div>
+
+            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
+              View Project
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+
+            <div class="space-y-4">
+              <h3 class="text-2xl font-semibold">Pulse Timing Controller</h3>
+
+              <p class="text-gray-700 leading-relaxed max-w-3xl">
+                High-precision pulse generation and propagation control system designed for experimental hardware applications.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Timing</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Electronics</span>
+              </div>
+            </div>
+
+            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
+              View Project
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+
+      <h2 class="text-3xl font-bold mb-10">Experience</h2>
+
+      <div class="space-y-8">
+
+        <div class="border-l-2 border-black pl-6">
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-semibold">Electrical Engineering Student</h3>
+              <p class="text-gray-600">Purdue University</p>
+            </div>
+
+            <p class="text-gray-500 whitespace-nowrap">2025 – Present</p>
+          </div>
+
+          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+            Pursuing coursework and projects focused on FPGA systems, digital logic, embedded systems, and semiconductor technologies.
+          </p>
+        </div>
+
+        <div class="border-l-2 border-black pl-6">
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-semibold">Embedded Systems Team</h3>
+              <p class="text-gray-600">HarmoniCore Project</p>
+            </div>
+
+            <p class="text-gray-500 whitespace-nowrap">2026</p>
+          </div>
+
+          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+            Worked on FPGA-based audio processing systems including RTL design, verification, and hardware integration.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-6 py-10 text-gray-500 text-sm flex flex-col md:flex-row justify-between gap-4">
+
+      <p>© 2026 Jean</p>
+
+      <div class="flex gap-6">
+        <a href="https://github.com" class="hover:text-black transition">GitHub</a>
+        <a href="https://linkedin.com" class="hover:text-black transition">LinkedIn</a>
+        <a href="mailto:example@email.com" class="hover:text-black transition">Email</a>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
