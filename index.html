@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jean | Engineering Portfolio</title>
+  <title>Jean's Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -16,15 +16,15 @@
       <div class="md:col-span-2 space-y-6">
 
         <div>
-          <h1 class="text-5xl font-bold tracking-tight">Jean</h1>
+          <h1 class="text-5xl font-bold tracking-tight">Jean-Milan Albarede</h1>
           <p class="text-xl text-gray-600 mt-3">
-            Electrical Engineering Student @ Purdue University
+            Pursuing Bachelors of Electrical Engineering @ Purdue University
           </p>
         </div>
 
         <p class="text-lg leading-relaxed text-gray-700 max-w-2xl">
-          Focused on FPGA design, DSP, RTL systems, embedded hardware,
-          semiconductor technologies, and high-performance digital systems.
+          Focused on FPGA design, PCB design, RTL systems, embedded hardware,
+          and semiconductor technologies.
         </p>
 
         <div class="flex flex-wrap gap-3 pt-2">
@@ -33,12 +33,19 @@
             View Projects
           </a>
 
-          <a href="https://github.com"
+          <a href="#experience"
+             class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
+            View Experiences
+          </a>
+
+          <a href="https://github.com/jeanAlbarede"
+             target="_blank" rel="noopener noreferrer"
              class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
             GitHub
           </a>
 
-          <a href="https://linkedin.com"
+          <a href="https://www.linkedin.com/in/jean-milan-albarede/"
+             target="_blank" rel="noopener noreferrer"
              class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
             LinkedIn
           </a>
@@ -46,9 +53,7 @@
       </div>
 
       <div class="flex justify-center">
-        <div class="w-64 h-64 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-lg shadow-lg">
-          Profile Photo
-        </div>
+        <img src="img/pfp.png" alt="Jean profile photo" class="w-64 h-64 rounded-full object-cover shadow-lg" />
       </div>
 
     </div>
@@ -105,9 +110,42 @@
       <div class="grid gap-8">
 
         <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1 space-y-4">
+              <h3 class="text-2xl font-semibold">FPGA Basketball Game Controller</h3>
 
-            <div class="space-y-4">
+              <p class="text-gray-700 leading-relaxed max-w-3xl">
+                Custom FPGA + PCB-based basketball scoreboard system with seven-segment displays, game timing, and buzzer logic.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">FPGA</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Verilog</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PCB Design</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Team Collaboration</span>
+              </div>
+
+              <a href="https://github.com/jeanAlbarede/socet-1-shot-clock-fork" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
+                View Project
+              </a>
+            </div>
+
+            <div class="w-full md:w-72">
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
+                <img src="img/BasketballControlerMain.png" alt="FPGA Basketball Game Controller thumbnail" class="h-full w-full object-cover" />
+                <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
+                  Basketball scoreboard FPGA logic and timing control
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1 space-y-4">
               <h3 class="text-2xl font-semibold">FPGA Audio Effects Processor</h3>
 
               <p class="text-gray-700 leading-relaxed max-w-3xl">
@@ -118,42 +156,29 @@
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">FPGA</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Verilog</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">DSP</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
               </div>
+
+              <a href="https://github.com/jeanAlbarede/fpga-audio-effects" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
+                View Project
+              </a>
             </div>
 
-            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
-              View Project
-            </button>
+            <div class="w-full md:w-72">
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
+                <img src="img/harmonicore_group.jpg" alt="FPGA Audio Effects Processor thumbnail" class="h-full w-full object-cover" />
+                <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
+                  Audio effects on FPGA with fixed-point DSP
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-
-            <div class="space-y-4">
-              <h3 class="text-2xl font-semibold">FPGA Basketball Game Controller</h3>
-
-              <p class="text-gray-700 leading-relaxed max-w-3xl">
-                Custom FPGA + PCB-based basketball scoreboard system with seven-segment displays, game timing, and buzzer logic.
-              </p>
-
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">FPGA</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Embedded</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PCB</span>
-              </div>
-            </div>
-
-            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
-              View Project
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-
-            <div class="space-y-4">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1 space-y-4">
               <h3 class="text-2xl font-semibold">Pulse Timing Controller</h3>
 
               <p class="text-gray-700 leading-relaxed max-w-3xl">
@@ -164,12 +189,23 @@
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Timing</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Electronics</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
               </div>
+
+              <a href="https://github.com/jeanAlbarede/BaPSF-FPGA-Time-Pulsing" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
+                View Project
+              </a>
             </div>
 
-            <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap">
-              View Project
-            </button>
+            <div class="w-full md:w-72">
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
+                <img src="img/pulseProjectThm.jpg" alt="Pulse Timing Controller thumbnail" class="h-full w-full object-cover" />
+                <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
+                  Testing FPGA with Oscilloscope & Wavegen for precise pulse timing control
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -178,7 +214,7 @@
   </section>
 
   <!-- Experience -->
-  <section class="border-t border-gray-200">
+  <section id="experience" class="border-t border-gray-200"></section>
     <div class="max-w-5xl mx-auto px-6 py-16">
 
       <h2 class="text-3xl font-bold mb-10">Experience</h2>
@@ -188,15 +224,15 @@
         <div class="border-l-2 border-black pl-6">
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
             <div>
-              <h3 class="text-xl font-semibold">Electrical Engineering Student</h3>
-              <p class="text-gray-600">Purdue University</p>
+              <h3 class="text-xl font-semibold">UCLA BaPSF Research Assistant</h3>
+              <p class="text-gray-600">FPGA Pulser, Wi-Fi FPGA ADC data transmitter</p>
             </div>
 
-            <p class="text-gray-500 whitespace-nowrap">2025 – Present</p>
+            <p class="text-gray-500 whitespace-nowrap">Summer, 2026</p>
           </div>
 
           <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            Pursuing coursework and projects focused on FPGA systems, digital logic, embedded systems, and semiconductor technologies.
+            Worked on FPGA pulser and Wi-Fi FPGA ADC data transmitter.
           </p>
         </div>
 
@@ -211,8 +247,42 @@
           </div>
 
           <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            Worked on FPGA-based audio processing systems including RTL design, verification, and hardware integration.
+            Worked on FPGA-based audio processing systems including RTL design.
           </p>
+        </div>
+
+        <div class="border-l-2 border-black pl-6">
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-semibold">IEEE MTT-S Member</h3>
+              <p class="text-gray-600">DIY Starlink Project</p>
+            </div>
+
+            <p class="text-gray-500 whitespace-nowrap">2026</p>
+          </div>
+
+          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+            RF Front end ... (more details to come)
+          </p>
+        </div>
+
+        
+
+        <div class="border-l-2 border-black pl-6">
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-semibold">Engineering Intern @ n6</h3>
+              <p class="text-gray-600">Biotech Startup - Pleasanton, CA</p>
+            </div>
+
+            <p class="text-gray-500 whitespace-nowrap">Summer, 2023</p>
+          </div>
+
+          <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
+            <li>Created part models in SolidWorks, applying GD&amp;T tolerances; received feedback through iterative design reviews and markups.</li>
+            <li>Conducted parts documentation by compiling component data from McMaster-Carr into company records.</li>
+            <li>Prototyped and fabricated small components that supported company projects utilizing additive manufacturing.</li>
+          </ul>
         </div>
 
       </div>
@@ -223,16 +293,70 @@
   <footer class="border-t border-gray-200">
     <div class="max-w-5xl mx-auto px-6 py-10 text-gray-500 text-sm flex flex-col md:flex-row justify-between gap-4">
 
-      <p>© 2026 Jean</p>
+      <p>© 2026 Jean-Milan Albarede</p>
 
       <div class="flex gap-6">
-        <a href="https://github.com" class="hover:text-black transition">GitHub</a>
-        <a href="https://linkedin.com" class="hover:text-black transition">LinkedIn</a>
-        <a href="mailto:example@email.com" class="hover:text-black transition">Email</a>
+        <a href="https://github.com/jeanAlbarede" target="_blank" rel="noopener noreferrer" class="hover:text-black transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/jean-milan-albarede/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition">LinkedIn</a>
+        <button id="emailButton" type="button" class="hover:text-black transition">Email</button>
       </div>
 
     </div>
   </footer>
+
+  <!-- Email popup modal -->
+  <div id="emailModal" class="fixed inset-0 flex items-center justify-center bg-black/40 p-6 hidden">
+    <div class="w-full max-w-md rounded-3xl bg-white p-8 shadow-xl border border-gray-200">
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <h3 class="text-xl font-semibold">Contact Email</h3>
+          <p class="text-gray-600 mt-2">Click to copy the email address.</p>
+        </div>
+        <button id="closeEmailModal" type="button" class="text-gray-500 hover:text-gray-900">✕</button>
+      </div>
+
+      <div class="mt-6 rounded-3xl border border-gray-200 bg-gray-50 p-4 text-gray-900 flex items-center justify-between gap-4">
+        <span id="emailText" class="break-all">jeanmilan.albarede@gmail.com</span>
+        <button id="copyEmailButton" type="button" class="px-4 py-2 rounded-2xl bg-black text-white hover:bg-gray-900 transition">Copy</button>
+      </div>
+
+      <p id="copyStatus" class="mt-4 text-sm text-green-600 hidden">Email copied to clipboard!</p>
+    </div>
+  </div>
+
+  <script>
+    const emailButton = document.getElementById('emailButton');
+    const emailModal = document.getElementById('emailModal');
+    const closeEmailModal = document.getElementById('closeEmailModal');
+    const copyEmailButton = document.getElementById('copyEmailButton');
+    const copyStatus = document.getElementById('copyStatus');
+    const emailText = document.getElementById('emailText').textContent;
+
+    function openModal() {
+      copyStatus.classList.add('hidden');
+      emailModal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      emailModal.classList.add('hidden');
+    }
+
+    emailButton.addEventListener('click', openModal);
+    closeEmailModal.addEventListener('click', closeModal);
+    emailModal.addEventListener('click', (event) => {
+      if (event.target === emailModal) closeModal();
+    });
+
+    copyEmailButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(emailText);
+        copyStatus.classList.remove('hidden');
+      } catch (err) {
+        copyStatus.textContent = 'Unable to copy automatically. Please copy manually.';
+        copyStatus.classList.remove('hidden');
+      }
+    });
+  </script>
 
 </body>
 </html>
