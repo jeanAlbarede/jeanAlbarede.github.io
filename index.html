@@ -6,11 +6,31 @@
   <title>Jean's Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #projectModal .modal-scroll {
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: #d1d5db transparent;
+    }
+
+    #projectModal .modal-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #projectModal .modal-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #projectModal .modal-scroll::-webkit-scrollbar-thumb {
+      background-color: #d1d5db;
+      border-radius: 9999px;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-white text-gray-900">
 
   <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
+  <section class="max-w-5xl mx-auto px-6 py-16">
     <div class="grid md:grid-cols-3 gap-12 items-center">
 
       <div class="md:col-span-2 space-y-6">
@@ -18,7 +38,7 @@
         <div>
           <h1 class="text-5xl font-bold tracking-tight">Jean-Milan Albarede</h1>
           <p class="text-xl text-gray-600 mt-3">
-            Pursuing Bachelors of Electrical Engineering @ Purdue University
+            Pursuing a Bachelor's degree in Electrical Engineering @ Purdue University
           </p>
         </div>
 
@@ -27,28 +47,42 @@
           and semiconductor technologies.
         </p>
 
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a href="#projects"
-             class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
-            View Projects
-          </a>
+        <div class="space-y-3 pt-2">
+          <div class="flex flex-wrap gap-3">
+            <a href="#projects"
+               class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
+              View Projects
+            </a>
 
-          <a href="#experience"
-             class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
-            View Experiences
-          </a>
+            <a href="#experience"
+               class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
+              View Experience
+            </a>
 
-          <a href="https://github.com/jeanAlbarede"
-             target="_blank" rel="noopener noreferrer"
-             class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
-            GitHub
-          </a>
+            <a href="#resume"
+               class="px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition">
+              View Resume
+            </a>
+          </div>
 
-          <a href="https://www.linkedin.com/in/jean-milan-albarede/"
-             target="_blank" rel="noopener noreferrer"
-             class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
-            LinkedIn
-          </a>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/jeanAlbarede"
+               target="_blank" rel="noopener noreferrer"
+               class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jean-milan-albarede/"
+               target="_blank" rel="noopener noreferrer"
+               class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+              LinkedIn
+            </a>
+
+            <button type="button"
+               class="email-open-button px-5 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+              Email
+            </button>
+          </div>
         </div>
       </div>
 
@@ -59,17 +93,17 @@
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Technical Interests & Skills -->
   <section class="border-t border-gray-200">
-    <div class="max-w-5xl mx-auto px-6 py-16">
+    <div class="max-w-5xl mx-auto px-6 py-10">
 
-      <h2 class="text-3xl font-bold mb-8">Technical Interests</h2>
+      <h2 class="text-3xl font-bold mb-4">Technical Interests</h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-3 gap-4">
 
-        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
-          <h3 class="font-semibold text-xl mb-4">Digital Design</h3>
-          <ul class="space-y-2 text-gray-700">
+        <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">Digital Design</h3>
+          <ul class="space-y-1 text-sm text-gray-700">
             <li>• Verilog/SystemVerilog</li>
             <li>• RTL Design</li>
             <li>• FSMs</li>
@@ -77,42 +111,99 @@
           </ul>
         </div>
 
-        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
-          <h3 class="font-semibold text-xl mb-4">FPGA & Embedded</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li>• Vivado</li>
-            <li>• PCB Integration</li>
-            <li>• UART/SPI</li>
-            <li>• Hardware Debugging</li>
+        <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">FPGA Design</h3>
+          <ul class="space-y-1 text-sm text-gray-700">
+            <li>• Xilinx Vivado</li>
+            <li>• Real-Time Systems</li>
+            <li>• Testbench Development</li>
+            <li>• IP Integration</li>            
           </ul>
         </div>
 
-        <div class="rounded-3xl border border-gray-200 p-6 bg-white shadow-sm">
-          <h3 class="font-semibold text-xl mb-4">Signal Processing</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li>• DSP</li>
-            <li>• Fixed-Point Arithmetic</li>
-            <li>• Filters</li>
-            <li>• Real-Time Systems</li>
+        <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">RF / PCB Design</h3>
+          <ul class="space-y-1 text-sm text-gray-700">
+            <li>• Signal & Power Integrity (SI/PI)</li>
+            <li>• High-Speed PCB Design</li>
+            <li>• Hardware Debugging</li>  
+            <li>• Schematic Capture & Component Creation</li>
           </ul>
         </div>
 
       </div>
+
+      <div class="mt-10 pt-8 border-t border-gray-200">
+        <h2 class="text-3xl font-bold mb-5">Skills</h2>
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+            <h3 class="font-semibold text-lg mb-3">Software</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Altium Designer</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">KiCad</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">LTspice</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Git/GitHub</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Linux</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Microsoft Excel</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PowerPoint</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Fusion 360</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+            <h3 class="font-semibold text-lg mb-3">Programming</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Python</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">C</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Verilog</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Java</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">MATLAB</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">LaTeX</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+            <h3 class="font-semibold text-lg mb-3">Fluent Languages</h3>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Russian</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">French</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">English</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 p-4 bg-white shadow-sm">
+            <h3 class="font-semibold text-lg mb-3">Other</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Data analysis w/ Python</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Soldering</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Oscilloscope</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Signal Generator</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Self-Motivated</span>
+              <span class="px-2.5 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Fast Self-Learner</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="border-t border-gray-200 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-6 py-16">
+    <div class="max-w-5xl mx-auto px-6 py-12">
 
-      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+      <h2 class="text-3xl font-bold mb-8">Projects</h2>
 
-      <div class="grid gap-8">
+      <div class="grid gap-6">
 
-        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+        <button type="button" data-project="basketball"
+                class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
           <div class="flex flex-col md:flex-row md:items-start gap-6">
             <div class="flex-1 space-y-4">
-              <h3 class="text-2xl font-semibold">FPGA Basketball Game Controller</h3>
+              <h3 class="text-2xl font-semibold group-hover:text-blue-900 transition-colors">FPGA Basketball Game Controller</h3>
 
               <p class="text-gray-700 leading-relaxed max-w-3xl">
                 Custom FPGA + PCB-based basketball scoreboard system with seven-segment displays, game timing, and buzzer logic.
@@ -124,29 +215,31 @@
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PCB Design</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">KiCad</span>
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Team Collaboration</span>
               </div>
 
-              <a href="https://github.com/jeanAlbarede/socet-1-shot-clock-fork" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
-                View Project
-              </a>
+              <span class="inline-flex px-4 py-2 rounded-xl border border-gray-300 group-hover:bg-white transition whitespace-nowrap items-center justify-center">
+                View Details
+              </span>
             </div>
 
             <div class="w-full md:w-72">
-              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
-                <img src="img/BasketballControlerMain.png" alt="FPGA Basketball Game Controller thumbnail" class="h-full w-full object-cover" />
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
+                <img src="img/BasketballControlerMain.png" alt="FPGA Basketball Game Controller thumbnail" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
                 <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
                   Basketball scoreboard FPGA logic and timing control
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </button>
 
-        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+        <button type="button" data-project="audio"
+                class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
           <div class="flex flex-col md:flex-row md:items-start gap-6">
             <div class="flex-1 space-y-4">
-              <h3 class="text-2xl font-semibold">FPGA Audio Effects Processor</h3>
+              <h3 class="text-2xl font-semibold group-hover:text-blue-900 transition-colors">FPGA Audio Effects Processor</h3>
 
               <p class="text-gray-700 leading-relaxed max-w-3xl">
                 Real-time audio processing system implemented on FPGA hardware using Verilog and fixed-point DSP pipelines.
@@ -160,26 +253,27 @@
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
               </div>
 
-              <a href="https://github.com/jeanAlbarede/fpga-audio-effects" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
-                View Project
-              </a>
+              <span class="inline-flex px-4 py-2 rounded-xl border border-gray-300 group-hover:bg-white transition whitespace-nowrap items-center justify-center">
+                View Details
+              </span>
             </div>
 
             <div class="w-full md:w-72">
-              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
-                <img src="img/harmonicore_group.jpg" alt="FPGA Audio Effects Processor thumbnail" class="h-full w-full object-cover" />
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
+                <img src="img/harmonicore_group.jpg" alt="FPGA Audio Effects Processor thumbnail" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
                 <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
                   Audio effects on FPGA with fixed-point DSP
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </button>
 
-        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition">
+        <button type="button" data-project="pulse"
+                class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
           <div class="flex flex-col md:flex-row md:items-start gap-6">
             <div class="flex-1 space-y-4">
-              <h3 class="text-2xl font-semibold">Pulse Timing Controller</h3>
+              <h3 class="text-2xl font-semibold group-hover:text-blue-900 transition-colors">Pulse Timing Controller</h3>
 
               <p class="text-gray-700 leading-relaxed max-w-3xl">
                 High-precision pulse generation and propagation control system designed for experimental hardware applications.
@@ -193,31 +287,31 @@
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
               </div>
 
-              <a href="https://github.com/jeanAlbarede/BaPSF-FPGA-Time-Pulsing" target="_blank" rel="noopener noreferrer" class="inline-flex px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition whitespace-nowrap items-center justify-center">
-                View Project
-              </a>
+              <span class="inline-flex px-4 py-2 rounded-xl border border-gray-300 group-hover:bg-white transition whitespace-nowrap items-center justify-center">
+                View Details
+              </span>
             </div>
 
             <div class="w-full md:w-72">
-              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56">
-                <img src="img/pulseProjectThm.jpg" alt="Pulse Timing Controller thumbnail" class="h-full w-full object-cover" />
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
+                <img src="img/pulseProjectThm.jpg" alt="Pulse Timing Controller thumbnail" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
                 <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
                   Testing FPGA with Oscilloscope & Wavegen for precise pulse timing control
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </button>
 
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="border-t border-gray-200"></section>
-    <div class="max-w-5xl mx-auto px-6 py-16">
+  <section id="experience" class="border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-6 py-12">
 
-      <h2 class="text-3xl font-bold mb-10">Experience</h2>
+      <h2 class="text-3xl font-bold mb-8">Experience</h2>
 
       <div class="space-y-8">
 
@@ -239,34 +333,61 @@
         <div class="border-l-2 border-black pl-6">
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
             <div>
-              <h3 class="text-xl font-semibold">Embedded Systems Team</h3>
-              <p class="text-gray-600">HarmoniCore Project</p>
+              <h3 class="text-xl font-semibold">Purdue SoCET</h3>
+              <p class="text-gray-600">Intro I: FPGA Basketball Game Controller</p>
             </div>
 
-            <p class="text-gray-500 whitespace-nowrap">2026</p>
+            <p class="text-gray-500 whitespace-nowrap">Spring, 2026</p>
           </div>
 
           <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            Worked on FPGA-based audio processing systems including RTL design.
+            Team hardware design project building a complete basketball scoreboard and shot-clock controller on an FPGA and custom PCB, with seven-segment displays, game-state logic, and buzzer output for end-of-period events.
           </p>
+
+          <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
+            <li>Owned top-level FPGA integration, combining RTL modules developed by team members into a cohesive, fully functional system while resolving interface, timing, and system-level issues.</li>
+            <li>Designed SystemVerilog modules for the top module, button conditioning, the main driver, tick generator, and their respective testbenches.</li>
+            <li>Integrated FPGA logic with a custom PCB for display drivers, buttons, and power distribution.</li>
+            <li>Implemented finite-state machines to handle button conditioning and tick generation.</li>
+            <li>Collaborated on system bring-up, debugging, and validation in Xilinx Vivado.</li>
+          </ul>
         </div>
 
         <div class="border-l-2 border-black pl-6">
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
             <div>
-              <h3 class="text-xl font-semibold">IEEE MTT-S Member</h3>
+              <h3 class="text-xl font-semibold">Embedded Systems @ Purdue (Member)</h3>
+              <p class="text-gray-600">Harmonicore Live Audio Effects Project</p>
+            </div>
+
+            <p class="text-gray-500 whitespace-nowrap">Spring, 2026</p>
+          </div>
+
+          <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
+            <li>Converted high-level Python audio-processing algorithms into RTL diagrams and Verilog for an Artix-7 FPGA, implementing live effects like distortion, harmonic delay, and telephone on analog audio input.</li>
+            <li>Built Verilog modules for audio buffering, fixed-point arithmetic, and effect processing stages.</li>
+            <li>Validated signal integrity and timing on FPGA development hardware.</li>
+            <li>Developed and verified testbenches in Xilinx Vivado to ensure correct real-time audio effects.</li>
+          </ul>
+        </div>
+
+        <div class="border-l-2 border-black pl-6">
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-semibold">IEEE Microwave Theory & Techniques Society (Member)</h3>
               <p class="text-gray-600">DIY Starlink Project</p>
             </div>
 
-            <p class="text-gray-500 whitespace-nowrap">2026</p>
+            <p class="text-gray-500 whitespace-nowrap">Fall, 2025</p>
           </div>
 
-          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            RF Front end ... (more details to come)
-          </p>
+          <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
+            <li>Designed the transceiver’s signal chain for both transmit (Tx) and receive (Rx) paths, applying knowledge of
+              antenna theory and RF architecture.</li>
+            <li>Evaluated and selected RF front-end components (PLLs, LNAs, Mixers, Phase Shifters) to optimize noise figure and
+              insertion loss.</li>
+          </ul>
         </div>
-
-        
 
         <div class="border-l-2 border-black pl-6">
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
@@ -286,23 +407,249 @@
         </div>
 
       </div>
+
+      <!-- Archived Projects -->
+      <div class="mt-12 border-t border-gray-200 pt-8">
+        <button id="archivedProjectsToggle" type="button"
+                class="w-full flex items-center justify-between gap-4 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-2xl"
+                aria-expanded="false" aria-controls="archivedProjectsPanel">
+          <div>
+            <h2 class="text-2xl font-bold group-hover:text-blue-900 transition-colors">Archived / Other Projects</h2>
+          </div>
+          <span id="archivedProjectsChevron" class="shrink-0 text-gray-400 group-hover:text-blue-600 transition-transform duration-200 text-xl leading-none">▼</span>
+        </button>
+
+        <div id="archivedProjectsPanel" class="mt-4 space-y-2">
+          <div class="archived-project group w-full text-left rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 shadow-sm cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+            <div class="archived-project-summary flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h3 class="text-lg font-semibold group-hover:text-blue-900 transition-colors">Wi-Fi Signal Attenuation Simulator</h3>
+              <div class="flex flex-wrap gap-1.5 justify-end">
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Python</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Ray-Tracing</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Matplotlib</span>
+              </div>
+            </div>
+            <div class="archived-project-details hidden mt-3 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="text-gray-500 text-sm">Fall, 2025</p>
+                <a href="https://github.com/jeanAlbarede/WiFi-Coverage-Simulation-" target="_blank" rel="noopener noreferrer"
+                   class="text-sm text-blue-600 hover:text-blue-800 whitespace-nowrap shrink-0">View on GitHub →</a>
+              </div>
+              <div class="space-y-2 text-sm text-gray-700">
+                <p class="leading-relaxed">
+                  A Python-based simulation tool that visualizes Wi-Fi signal propagation &amp; attenuation through different wall materials and floorplans. Users can design custom layouts, place routers, and generate heatmaps based on real-world physics and frequency bands.
+                </p>
+                <ul class="grid sm:grid-cols-2 gap-x-4 gap-y-0.5 text-gray-600 list-disc list-inside leading-snug">
+                  <li>Wall attenuation via the Friis Transmission Equation</li>
+                  <li>Adjustable clutter conditions</li>
+                  <li>Custom router spec simulation</li>
+                  <li>Interactive GUI for layout editing</li>
+                </ul>
+              </div>
+              <div class="gallery-group flex flex-wrap gap-2.5">
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/floorplan.png" data-alt="Desired Floorplan" data-caption="Desired Floorplan">
+                <img src="img/archived/floorplan.png" alt="Desired Floorplan" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/floorUserInput.png" data-alt="User Input for the Floorplan" data-caption="User Input for the Floorplan">
+                <img src="img/archived/floorUserInput.png" alt="User Input for the Floorplan" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/floorSimResult.png" data-alt="Result of the Simulation (two Wi-Fi dead zones caught)" data-caption="Result of the Simulation (two Wi-Fi dead zones caught)">
+                <img src="img/archived/floorSimResult.png" alt="Result of the Simulation (two Wi-Fi dead zones caught)" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/flowchart.png" data-alt="Flowchart of the whole program" data-caption="Flowchart of the whole program">
+                <img src="img/archived/flowchart.png" alt="Flowchart of the whole program" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/testUserIn.png" data-alt="User's Input" data-caption="User's Input">
+                <img src="img/archived/testUserIn.png" alt="User's Input" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/testSimResult.png" data-alt="Result of the simulation" data-caption="Result of the simulation">
+                <img src="img/archived/testSimResult.png" alt="Result of the simulation" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="archived-project group w-full text-left rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 shadow-sm cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+            <div class="archived-project-summary flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h3 class="text-lg font-semibold group-hover:text-blue-900 transition-colors">Temperature Sensor Signal Conditioning PCB</h3>
+              <div class="flex flex-wrap gap-1.5 justify-end">
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Altium</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">PCB Design</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Analog</span>
+              </div>
+            </div>
+            <div class="archived-project-details hidden mt-3 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="text-gray-500 text-sm">Winter, 2025</p>
+                <a href="https://github.com/jeanAlbarede/Temperature-Sensor-Op-Amp-Conditioning-PCB/tree/main" target="_blank" rel="noopener noreferrer"
+                   class="text-sm text-blue-600 hover:text-blue-800 whitespace-nowrap shrink-0">View on GitHub →</a>
+              </div>
+              <div class="space-y-2 text-sm text-gray-700">
+                <p class="leading-relaxed">
+                  Analog front-end for a TMP36 temperature sensor: 5&nbsp;V input regulated to 3.3&nbsp;V through an LDO (chosen over a buck converter for lower noise), with 0.1&nbsp;µF and 1&nbsp;µF shunt decoupling. Signal path is LDO → TMP36 → non-inverting gain stage → RC low-pass filter (~10&nbsp;Hz) → unity-gain buffer → ADC/microcontroller output, using rail-to-rail, single-supply 3.3&nbsp;V op-amps.
+                </p>
+                <ul class="grid sm:grid-cols-2 gap-x-4 gap-y-0.5 text-gray-600 list-disc list-inside leading-snug">
+                  <li>Gain stage scales mV sensor output with high input impedance so the TMP36 is not loaded</li>
+                  <li>~10&nbsp;Hz RC filter after gain attenuates ripple and noise on the slow temperature signal</li>
+                  <li>Unity-gain buffer isolates the filter from the ADC with low output impedance</li>
+                  <li>Ground plane and tight decoupling loops for clean analog performance</li>
+                </ul>
+              </div>
+              <div class="gallery-group flex flex-wrap gap-2.5">
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/signalCondPCB.png" data-alt="3D render from Altium" data-caption="3D render from Altium">
+                <img src="img/archived/signalCondPCB.png" alt="3D render from Altium" class="w-full h-full object-cover group-hover:brightness-95 transition" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/signalCondSchem.png" data-alt="Schematic constructed in Altium" data-caption="Schematic constructed in Altium">
+                <img src="img/archived/signalCondSchem.png" alt="Schematic constructed in Altium" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="archived-project group w-full text-left rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 shadow-sm cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+            <div class="archived-project-summary flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h3 class="text-lg font-semibold group-hover:text-blue-900 transition-colors">Your Body Guardian: An Automatic Pill Dispenser</h3>
+              <div class="flex flex-wrap gap-1.5 justify-end">
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Embedded</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Arduino</span>
+              </div>
+            </div>
+            <div class="archived-project-details hidden mt-3 space-y-3">
+              <p class="text-gray-500 text-sm">Fall, 2025</p>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                Collaborated in a four-person team to design and prototype a microcontroller-based pill dispensing system addressing medication non-adherence, optimizing usability, reliability, and cost under tight time constraints. Earned 1st place for final project presentation, chosen from a class of ~100 for technical execution &amp; communication.
+              </p>
+              <div class="gallery-group flex flex-wrap gap-2.5">
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/award picture.jpg" data-alt="1st place for final project presentation (class of ~100)" data-caption="1st place for final project presentation (class of ~100)">
+                <img src="img/archived/award picture.jpg" alt="1st place for final project presentation (class of ~100)" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              <button type="button"
+                      class="gallery-image-btn group shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-200 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                      data-src="img/archived/YBG overview.jpg" data-alt="Project Overview" data-caption="Project Overview">
+                <img src="img/archived/YBG overview.jpg" alt="Project Overview" class="w-full h-full object-cover group-hover:brightness-95 transition" onerror="this.closest('button').replaceWith(Object.assign(document.createElement('div'), { className: 'shrink-0 w-28 h-[4.5rem] sm:w-32 sm:h-20 rounded-lg border border-gray-200 bg-gray-200' }));" />
+              </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="border-t border-gray-200 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-3xl font-bold">Resume</h2>
+          <p class="text-gray-600 mt-2">PDF preview and download</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="resume/resume.pdf" download
+             class="inline-flex px-5 py-3 rounded-2xl bg-black text-white font-medium hover:opacity-90 transition whitespace-nowrap">
+            Download PDF
+          </a>
+          <a href="resume/resume.pdf" target="_blank" rel="noopener noreferrer"
+             class="inline-flex px-5 py-3 rounded-2xl border border-gray-300 font-medium hover:bg-gray-100 transition whitespace-nowrap">
+            Open in new tab
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <object data="resume/resume.pdf" type="application/pdf"
+                class="w-full h-[70vh] min-h-[480px] block">
+          <iframe src="resume/resume.pdf" title="Jean-Milan Albarede Resume"
+                  class="w-full h-[70vh] min-h-[480px] border-0"></iframe>
+        </object>
+        <p class="p-4 text-center text-sm text-gray-500 border-t border-gray-100">
+          Preview not showing?
+          <a href="resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Open the PDF in your browser</a>.
+        </p>
+      </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-gray-200">
-    <div class="max-w-5xl mx-auto px-6 py-10 text-gray-500 text-sm flex flex-col md:flex-row justify-between gap-4">
+    <div class="max-w-5xl mx-auto px-6 py-8 text-gray-500 text-sm flex flex-col md:flex-row justify-between gap-4">
 
       <p>© 2026 Jean-Milan Albarede</p>
 
       <div class="flex gap-6">
         <a href="https://github.com/jeanAlbarede" target="_blank" rel="noopener noreferrer" class="hover:text-black transition">GitHub</a>
         <a href="https://www.linkedin.com/in/jean-milan-albarede/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition">LinkedIn</a>
-        <button id="emailButton" type="button" class="hover:text-black transition">Email</button>
+        <button id="emailButton" type="button" class="email-open-button hover:text-black transition">Email</button>
       </div>
 
     </div>
   </footer>
+
+  <!-- Project detail modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 sm:p-6 hidden" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <div class="w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl bg-white shadow-xl border border-gray-200 overflow-hidden">
+      <div class="shrink-0 flex flex-wrap items-start justify-between gap-4 bg-white border-b border-gray-100 px-6 sm:px-8 py-5">
+        <div class="min-w-0 flex-1">
+          <h3 id="projectModalTitle" class="text-2xl font-semibold"></h3>
+          <p id="projectModalSubtitle" class="text-gray-500 mt-1 text-sm"></p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a id="projectModalLink" href="#" target="_blank" rel="noopener noreferrer"
+             class="inline-flex px-4 py-2 rounded-xl bg-black text-white text-sm font-medium hover:opacity-90 transition whitespace-nowrap">
+            View on GitHub
+          </a>
+          <button id="closeProjectModal" type="button" class="shrink-0 text-gray-500 hover:text-gray-900 text-xl leading-none p-1" aria-label="Close project details">✕</button>
+        </div>
+      </div>
+
+      <div class="modal-scroll overflow-y-auto overscroll-contain flex-1 min-h-0 px-6 sm:px-8 py-6 space-y-6">
+        <p id="projectModalDescription" class="text-gray-700 leading-relaxed"></p>
+
+        <div>
+          <h4 class="font-semibold text-lg mb-3">Highlights</h4>
+          <ul id="projectModalHighlights" class="space-y-2 text-gray-700 list-disc list-inside"></ul>
+        </div>
+
+        <div id="projectModalGallery" class="gallery-group grid sm:grid-cols-2 gap-4"></div>
+
+        <div id="projectModalTags" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project image lightbox -->
+  <div id="imageLightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Expanded project image">
+    <button id="closeImageLightbox" type="button" class="absolute top-4 right-4 z-10 text-white/80 hover:text-white text-2xl leading-none p-2" aria-label="Close expanded image">✕</button>
+    <button id="lightboxPrev" type="button" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 hidden w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/25 text-white text-3xl leading-none flex items-center justify-center transition" aria-label="Previous image">‹</button>
+    <button id="lightboxNext" type="button" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 hidden w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/25 text-white text-3xl leading-none flex items-center justify-center transition" aria-label="Next image">›</button>
+    <figure class="max-w-5xl w-full max-h-full flex flex-col items-center px-12 sm:px-16">
+      <img id="imageLightboxImg" src="" alt="" class="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl" />
+      <figcaption id="imageLightboxCaption" class="mt-4 text-center text-sm text-white/80 max-w-2xl"></figcaption>
+      <p id="lightboxCounter" class="mt-2 text-xs text-white/50 hidden"></p>
+    </figure>
+  </div>
 
   <!-- Email popup modal -->
   <div id="emailModal" class="fixed inset-0 flex items-center justify-center bg-black/40 p-6 hidden">
@@ -325,26 +672,29 @@
   </div>
 
   <script>
-    const emailButton = document.getElementById('emailButton');
+    const emailButtons = document.querySelectorAll('.email-open-button');
     const emailModal = document.getElementById('emailModal');
     const closeEmailModal = document.getElementById('closeEmailModal');
     const copyEmailButton = document.getElementById('copyEmailButton');
     const copyStatus = document.getElementById('copyStatus');
     const emailText = document.getElementById('emailText').textContent;
 
-    function openModal() {
+    function openEmailModal() {
       copyStatus.classList.add('hidden');
+      copyStatus.textContent = 'Email copied to clipboard!';
       emailModal.classList.remove('hidden');
     }
 
-    function closeModal() {
+    function closeEmailModalFn() {
       emailModal.classList.add('hidden');
     }
 
-    emailButton.addEventListener('click', openModal);
-    closeEmailModal.addEventListener('click', closeModal);
+    emailButtons.forEach((button) => {
+      button.addEventListener('click', openEmailModal);
+    });
+    closeEmailModal.addEventListener('click', closeEmailModalFn);
     emailModal.addEventListener('click', (event) => {
-      if (event.target === emailModal) closeModal();
+      if (event.target === emailModal) closeEmailModalFn();
     });
 
     copyEmailButton.addEventListener('click', async () => {
@@ -355,6 +705,285 @@
         copyStatus.textContent = 'Unable to copy automatically. Please copy manually.';
         copyStatus.classList.remove('hidden');
       }
+    });
+
+    const projectData = {
+      basketball: {
+        title: 'FPGA Basketball Game Controller',
+        subtitle: 'Team hardware design project · SoCET',
+        description: 'A complete basketball scoreboard and shot-clock controller built around an FPGA and custom PCB. The system drives seven-segment displays for score and time, manages game-state logic, and triggers buzzer output for end-of-period events.',
+        highlights: [
+          'Owned top-level FPGA integration, combining RTL modules developed by team members into a cohesive, fully functional system while resolving interface, timing, and system-level issues.',
+          'Designed SystemVerilog modules for the top module, button conditioning, the main driver, tick generator, and their respective testbenches.',
+          'Integrated FPGA logic with a custom PCB for display drivers, buttons, and power distribution.',
+          'Implemented finite-state machines to handle button conditioning and tick generation.',
+          'Collaborated on system bring-up, debugging, and validation in Xilinx Vivado.',
+        ],
+        images: [
+          { src: 'img/RTL Diagram.png', alt: 'FPGA basketball controller main board and display', caption: 'Main RTL diagram of the entire project' },
+          { src: 'img/BasketballControlerMain.jpeg', alt: 'Close-up of basketball game controller hardware', caption: 'Custom hand-soldered PCB shield for Arty A7 FPGA' },
+          { src: 'img/game_clock_waveform.png', alt: 'Close-up of game clock waveforms', caption: 'Waveform diagrams from the game clock module testbench' },
+          { src: 'img/KiCad3d.jpeg', alt: 'Close-up of KiCad 3D Render of the PCB', caption: 'KiCad 3D Render of the PCB' },
+        ],
+        tags: ['FPGA', 'Verilog', 'PCB Design', 'Xilinx Vivado', 'RTL Design', 'KiCad', 'Team Collaboration'],
+        github: 'https://github.com/jeanAlbarede/socet-1-shot-clock-fork',
+      },
+
+      audio: {
+        title: 'FPGA Audio Effects Processor',
+        subtitle: 'Harmonicore Project · Embedded Systems @ Purdue Club (FPGA Sub-team Member)',
+        description: 'A real-time audio effects pipeline implemented entirely in FPGA hardware. The design converts analog input to digital audio streams through an ADC on a custom PCB (designed by the PCB sub-team) to apply effects with low latency and converting the output back to analog via a DAC.',
+        highlights: [
+          'Converted high-level Python audio-processing algorithms into RTL diagrams and Verilog for an Artix-7 FPGA, implementing live effects like distortion, harmonic delay, and telephone on analog audio input.',
+          'Built Verilog modules for audio buffering, fixed-point arithmetic, and effect processing stages.',
+          'Validated signal integrity and timing on FPGA development hardware.',
+          'Developed and verified testbenches in Xilinx Vivado to ensure correct real-time audio effects.',
+        ],
+        images: [
+          { src: 'img/harmonicore_group.jpg', alt: 'Full Harmonicore team', caption: 'The Harmonicore Team' },
+          { src: 'img/Distortion RTL.png', alt: 'RTL Diagram for the distortion effect', caption: 'RTL diagram for a simple distortion effect' },
+        ],
+        tags: ['FPGA', 'Verilog', 'DSP', 'Xilinx Vivado', 'RTL Design'],
+        github: 'https://github.com/jeanAlbarede/fpga-audio-effects',
+      },
+      pulse: {
+        title: 'Pulse Timing Controller',
+        subtitle: 'UCLA BaPSF Research · Experimental Hardware',
+        description: 'A high-precision pulse generation and propagation control system for experimental applications. The FPGA generates tightly controlled timing signals, with hardware validated using oscilloscopes and waveform generators to meet strict timing requirements.',
+        highlights: [
+          'Developed RTL for configurable pulse width, delay, and trigger sequencing.',
+          'Verified output timing against reference instruments during hardware testing.',
+          'Designed for integration into larger experimental control systems.',
+          'Focused on reliable, repeatable pulse behavior for lab use.',
+        ],
+        images: [
+          { src: 'img/pulseProjectThm.jpg', alt: 'FPGA pulse timing setup with oscilloscope and wave generator', caption: 'FPGA tested with oscilloscope and wave generator' },
+        ],
+        tags: ['Timing', 'RTL', 'Electronics', 'Xilinx Vivado', 'RTL Design'],
+        github: 'https://github.com/jeanAlbarede/BaPSF-FPGA-Time-Pulsing',
+      },
+    };
+
+    const projectModal = document.getElementById('projectModal');
+    const closeProjectModal = document.getElementById('closeProjectModal');
+    const projectCards = document.querySelectorAll('.project-card');
+    const imageLightbox = document.getElementById('imageLightbox');
+    const imageLightboxImg = document.getElementById('imageLightboxImg');
+    const imageLightboxCaption = document.getElementById('imageLightboxCaption');
+    const closeImageLightbox = document.getElementById('closeImageLightbox');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function lockBodyScroll() {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = scrollbarWidth > 0 ? `${scrollbarWidth}px` : '';
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function unlockBodyScroll() {
+      document.body.style.paddingRight = '';
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function showLightboxImage(index) {
+      if (!lightboxImages.length) return;
+
+      lightboxIndex = (index + lightboxImages.length) % lightboxImages.length;
+      const image = lightboxImages[lightboxIndex];
+
+      imageLightboxImg.src = image.src;
+      imageLightboxImg.alt = image.alt;
+      imageLightboxCaption.textContent = image.caption;
+
+      const multiple = lightboxImages.length > 1;
+      lightboxPrev.classList.toggle('hidden', !multiple);
+      lightboxNext.classList.toggle('hidden', !multiple);
+      lightboxCounter.classList.toggle('hidden', !multiple);
+      if (multiple) {
+        lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+      }
+    }
+
+    function openImageLightboxFromButton(button) {
+      const group = button.closest('.gallery-group');
+      if (!group) return;
+
+      const buttons = Array.from(group.querySelectorAll('.gallery-image-btn'));
+      lightboxImages = buttons.map((btn) => ({
+        src: btn.dataset.src,
+        alt: btn.dataset.alt,
+        caption: btn.dataset.caption,
+      }));
+      lightboxIndex = buttons.indexOf(button);
+
+      showLightboxImage(lightboxIndex);
+      imageLightbox.classList.remove('hidden');
+      imageLightbox.classList.add('flex');
+    }
+
+    function stepLightboxImage(step) {
+      showLightboxImage(lightboxIndex + step);
+    }
+
+    function closeImageLightboxFn() {
+      imageLightbox.classList.add('hidden');
+      imageLightbox.classList.remove('flex');
+      imageLightboxImg.src = '';
+      lightboxImages = [];
+      lightboxIndex = 0;
+    }
+
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('.gallery-image-btn');
+      if (!button) return;
+      event.stopPropagation();
+      openImageLightboxFromButton(button);
+    });
+
+    closeImageLightbox.addEventListener('click', closeImageLightboxFn);
+    lightboxPrev.addEventListener('click', (event) => {
+      event.stopPropagation();
+      stepLightboxImage(-1);
+    });
+    lightboxNext.addEventListener('click', (event) => {
+      event.stopPropagation();
+      stepLightboxImage(1);
+    });
+    imageLightbox.addEventListener('click', (event) => {
+      if (event.target === imageLightbox) closeImageLightboxFn();
+    });
+
+    function openProjectModal(projectId) {
+      const project = projectData[projectId];
+      if (!project) return;
+
+      document.getElementById('projectModalTitle').textContent = project.title;
+      document.getElementById('projectModalSubtitle').textContent = project.subtitle;
+      document.getElementById('projectModalDescription').textContent = project.description;
+
+      const highlightsEl = document.getElementById('projectModalHighlights');
+      highlightsEl.innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
+
+      const galleryEl = document.getElementById('projectModalGallery');
+      galleryEl.innerHTML = project.images.map((image, index) => `
+        <figure class="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 group">
+          <button type="button" class="gallery-image-btn block w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                  data-src="${image.src}" data-alt="${image.alt}" data-caption="${image.caption}" aria-label="Expand image: ${image.caption}">
+            <div class="relative">
+              <img src="${image.src}" alt="${image.alt}" class="w-full h-56 object-cover group-hover:brightness-95 transition" />
+              <span class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/25 transition">
+                <span class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium px-3 py-1.5 rounded-full bg-black/50">Click to expand</span>
+              </span>
+            </div>
+          </button>
+          <figcaption class="p-3 text-sm text-gray-600">${image.caption}</figcaption>
+        </figure>
+      `).join('');
+
+      const tagsEl = document.getElementById('projectModalTags');
+      tagsEl.innerHTML = project.tags.map((tag) =>
+        `<span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">${tag}</span>`
+      ).join('');
+
+      const linkEl = document.getElementById('projectModalLink');
+      linkEl.href = project.github;
+
+      projectModal.classList.remove('hidden');
+      lockBodyScroll();
+    }
+
+    function closeProjectModalFn() {
+      closeImageLightboxFn();
+      projectModal.classList.add('hidden');
+      unlockBodyScroll();
+    }
+
+    projectCards.forEach((card) => {
+      card.addEventListener('click', () => openProjectModal(card.dataset.project));
+    });
+
+    closeProjectModal.addEventListener('click', closeProjectModalFn);
+    projectModal.addEventListener('click', (event) => {
+      if (event.target === projectModal) closeProjectModalFn();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!imageLightbox.classList.contains('hidden')) {
+        if (event.key === 'Escape') {
+          closeImageLightboxFn();
+          return;
+        }
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          stepLightboxImage(-1);
+          return;
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          stepLightboxImage(1);
+          return;
+        }
+      }
+
+      if (event.key === 'Escape' && !projectModal.classList.contains('hidden')) {
+        closeProjectModalFn();
+      }
+    });
+
+    const archivedProjectsToggle = document.getElementById('archivedProjectsToggle');
+    const archivedProjectsPanel = document.getElementById('archivedProjectsPanel');
+    const archivedProjectsChevron = document.getElementById('archivedProjectsChevron');
+    const archivedProjects = document.querySelectorAll('.archived-project');
+
+    function setArchivedProjectsExpanded(expandAll) {
+      archivedProjects.forEach((card) => {
+        const details = card.querySelector('.archived-project-details');
+        details.classList.toggle('hidden', !expandAll);
+        card.classList.toggle('archived-expanded', expandAll);
+      });
+      archivedProjectsPanel.classList.toggle('archived-expanded', expandAll);
+      archivedProjectsPanel.classList.toggle('space-y-2', !expandAll);
+      archivedProjectsPanel.classList.toggle('space-y-4', expandAll);
+      archivedProjectsToggle.setAttribute('aria-expanded', String(expandAll));
+      archivedProjectsChevron.classList.toggle('rotate-180', expandAll);
+    }
+
+    function syncArchivedSectionState() {
+      const expandedCards = Array.from(archivedProjects).filter((card) =>
+        !card.querySelector('.archived-project-details').classList.contains('hidden')
+      );
+      const anyExpanded = expandedCards.length > 0;
+      const allExpanded = expandedCards.length === archivedProjects.length;
+
+      archivedProjectsPanel.classList.toggle('archived-expanded', anyExpanded);
+      archivedProjectsPanel.classList.toggle('space-y-2', !anyExpanded);
+      archivedProjectsPanel.classList.toggle('space-y-4', anyExpanded);
+      archivedProjectsToggle.setAttribute('aria-expanded', String(allExpanded));
+      archivedProjectsChevron.classList.toggle('rotate-180', allExpanded);
+    }
+
+    archivedProjectsToggle.addEventListener('click', () => {
+      const anyHidden = Array.from(archivedProjects).some((card) =>
+        card.querySelector('.archived-project-details').classList.contains('hidden')
+      );
+      setArchivedProjectsExpanded(anyHidden);
+    });
+
+    archivedProjects.forEach((card) => {
+      const details = card.querySelector('.archived-project-details');
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, .gallery-image-btn')) return;
+
+        const willExpand = details.classList.contains('hidden');
+        details.classList.toggle('hidden', !willExpand);
+        card.classList.toggle('archived-expanded', willExpand);
+        syncArchivedSectionState();
+      });
     });
   </script>
 
