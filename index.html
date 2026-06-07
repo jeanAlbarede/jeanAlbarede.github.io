@@ -235,6 +235,40 @@
           </div>
         </button>
 
+        <button type="button" data-project="pulse"
+                class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1 space-y-4">
+              <h3 class="text-2xl font-semibold group-hover:text-blue-900 transition-colors">FPGA High-Speed Pulse Generator w/ Custom PCB</h3>
+
+              <p class="text-gray-700 leading-relaxed max-w-3xl">
+                Nanosecond time-scale pulse generation system designed for Stark Spectroscopy with a custom PCB breakout board.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Timing</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Altium Designer</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">SystemVerilog</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">PCB Design</span>
+              </div>
+
+              <span class="inline-flex px-4 py-2 rounded-xl border border-gray-300 group-hover:bg-white transition whitespace-nowrap items-center justify-center">
+                View Details
+              </span>
+            </div>
+
+            <div class="w-full md:w-72">
+              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
+                <img src="img/PulseGenPCBRend.png" alt="Render of Custom PCB designed in Altium" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
+                  Render of Custom PCB designed in Altium
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+
         <button type="button" data-project="audio"
                 class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
           <div class="flex flex-col md:flex-row md:items-start gap-6">
@@ -269,40 +303,6 @@
           </div>
         </button>
 
-        <button type="button" data-project="pulse"
-                class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
-          <div class="flex flex-col md:flex-row md:items-start gap-6">
-            <div class="flex-1 space-y-4">
-              <h3 class="text-2xl font-semibold group-hover:text-blue-900 transition-colors">Pulse Timing Controller</h3>
-
-              <p class="text-gray-700 leading-relaxed max-w-3xl">
-                High-precision pulse generation and propagation control system designed for experimental hardware applications.
-              </p>
-
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Timing</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Electronics</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">Xilinx Vivado</span>
-                <span class="px-3 py-1 rounded-full text-sm bg-gray-100 border border-gray-200">RTL Design</span>
-              </div>
-
-              <span class="inline-flex px-4 py-2 rounded-xl border border-gray-300 group-hover:bg-white transition whitespace-nowrap items-center justify-center">
-                View Details
-              </span>
-            </div>
-
-            <div class="w-full md:w-72">
-              <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
-                <img src="img/pulseProjectThm.jpg" alt="Pulse Timing Controller thumbnail" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
-                <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
-                  Testing FPGA with Oscilloscope & Wavegen for precise pulse timing control
-                </div>
-              </div>
-            </div>
-          </div>
-        </button>
-
       </div>
     </div>
   </section>
@@ -324,10 +324,13 @@
 
             <p class="text-gray-500 whitespace-nowrap">Summer, 2026</p>
           </div>
-
-          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            Worked on FPGA pulser and Wi-Fi FPGA ADC data transmitter.
-          </p>
+          <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
+            <li>Designed an FPGA-based 15-channel nanosecond pulse generation system on a Xilinx Artix-7, producing user-adjustable 45–55 ns pulses with 0.5 ns resolution for plasma diagnostics experiments.</li>
+            <li>Implemented dynamic MMCM reconfiguration and clock-domain synchronization logic to achieve runtime pulse-width adjustment without FPGA reprogramming.</li>
+            <li>Designed a custom 4-layer high-speed PCB featuring length-matched, impedance-controlled routing, 15 gate-driver channels, and SMA outputs for low-jitter pulse distribution.</li>
+            <li>Validated timing performance using Vivado simulation and oscilloscope measurements, integrating synchronization outputs for lasers, cameras, and other laboratory instrumentation.</li>
+            <li>Completed schematic capture, PCB layout, DRC closure, and manufacturing preparation using Altium Designer.</li>
+          </ul>
         </div>
 
         <div class="border-l-2 border-black pl-6">
@@ -366,7 +369,6 @@
           <ul class="mt-2 text-gray-700 leading-relaxed max-w-3xl list-disc list-inside space-y-0">
             <li>Converted high-level Python audio-processing algorithms into RTL diagrams and Verilog for an Artix-7 FPGA, implementing live effects like distortion, harmonic delay, and telephone on analog audio input.</li>
             <li>Built Verilog modules for audio buffering, fixed-point arithmetic, and effect processing stages.</li>
-            <li>Validated signal integrity and timing on FPGA development hardware.</li>
             <li>Developed and verified testbenches in Xilinx Vivado to ensure correct real-time audio effects.</li>
           </ul>
         </div>
@@ -550,6 +552,22 @@
             </div>
           </div>
 
+          <div class="archived-project group w-full text-left rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 shadow-sm cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+            <div class="archived-project-summary flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h3 class="text-lg font-semibold group-hover:text-blue-900 transition-colors">Digital Picture Frame Project</h3>
+              <div class="flex flex-wrap gap-1.5 justify-end">
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Embedded</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">Raspberry Pi</span>
+                <span class="px-2.5 py-1 rounded-full text-xs bg-white border border-gray-200">API</span>
+              </div>
+            </div>
+            <div class="archived-project-details hidden mt-3 space-y-3">
+              <p class="text-gray-700 text-sm leading-relaxed">
+                Repurposed a laptop display into a custom digital picture frame using a Raspberry Pi and an LCD driver board. Developed a Python-based GUI that integrates Flickr’s API to automatically fetch and display photos, utilizing flickrapi, Pillow, and tkinter.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -715,7 +733,7 @@
         highlights: [
           'Owned top-level FPGA integration, combining RTL modules developed by team members into a cohesive, fully functional system while resolving interface, timing, and system-level issues.',
           'Designed SystemVerilog modules for the top module, button conditioning, the main driver, tick generator, and their respective testbenches.',
-          'Integrated FPGA logic with a custom PCB for display drivers, buttons, and power distribution.',
+          'Integrated FPGA logic with a custom PCB for display drivers and physical user input.',
           'Implemented finite-state machines to handle button conditioning and tick generation.',
           'Collaborated on system bring-up, debugging, and validation in Xilinx Vivado.',
         ],
@@ -743,23 +761,27 @@
           { src: 'img/harmonicore_group.jpg', alt: 'Full Harmonicore team', caption: 'The Harmonicore Team' },
           { src: 'img/Distortion RTL.png', alt: 'RTL Diagram for the distortion effect', caption: 'RTL diagram for a simple distortion effect' },
         ],
-        tags: ['FPGA', 'Verilog', 'DSP', 'Xilinx Vivado', 'RTL Design'],
+        tags: ['FPGA', 'Verilog', 'Xilinx Vivado', 'Altium Designer', 'PCB Design'],
         github: 'https://github.com/jeanAlbarede/fpga-audio-effects',
       },
+
       pulse: {
-        title: 'Pulse Timing Controller',
+        title: 'FPGA High-Speed Pulse Generator w/ Custom PCB',
         subtitle: 'UCLA BaPSF Research · Experimental Hardware',
-        description: 'A high-precision pulse generation and propagation control system for experimental applications. The FPGA generates tightly controlled timing signals, with hardware validated using oscilloscopes and waveform generators to meet strict timing requirements.',
+        description: 'Designed and implemented an FPGA-based multi-channel pulse generation system on a Xilinx Artix-7 (Arty A7-100T) for plasma diagnostics and electric field measurement experiments (stark spectroscopy). The RTL allows for precisely timed sequential pulses across 15 output channels with user-adjustable pulse widths from 45–55 ns in 0.5 ns increments. Designed a custom breakout board for the FPGA to physically trigger high-power MOSFETs.',
         highlights: [
           'Developed RTL for configurable pulse width, delay, and trigger sequencing.',
-          'Verified output timing against reference instruments during hardware testing.',
-          'Designed for integration into larger experimental control systems.',
-          'Focused on reliable, repeatable pulse behavior for lab use.',
+          'Validated timing performance using Vivado simulation and oscilloscope measurements, integrating synchronization outputs for lasers, cameras, and other laboratory instrumentation.',
+          'Modified AMD\'s provided MMCM dynamic reconfiguration logic to support runtime selection of more than two clock frequencies.',
+          'Designed a custom 4-layer high-speed PCB featuring length-matched, impedance-controlled routing, 15 gate-driver channels, and SMA outputs for low-jitter pulse distribution.',
+          'Completed schematic capture, PCB layout, DRC closure, and manufacturing preparation using Altium Designer.',
+          'Investigated MOSFET gate-drive behavior, transmission-line effects, Miller plateau dynamics, transient thermal limits, and high-current switching requirements to guide hardware architecture decisions.',
         ],
         images: [
+        { src: 'img/CleanPCBRend.png', alt: 'Render of Custom PCB designed in Altium', caption: 'Render of Custom PCB designed in Altium' },
           { src: 'img/pulseProjectThm.jpg', alt: 'FPGA pulse timing setup with oscilloscope and wave generator', caption: 'FPGA tested with oscilloscope and wave generator' },
         ],
-        tags: ['Timing', 'RTL', 'Electronics', 'Xilinx Vivado', 'RTL Design'],
+        tags: ['Timing', 'RTL', 'SystemVerilog', 'Xilinx Vivado', 'RTL Design', 'PCB Design', 'Altium Designer'],
         github: 'https://github.com/jeanAlbarede/BaPSF-FPGA-Time-Pulsing',
       },
     };
