@@ -31,13 +31,22 @@
 <body class="min-h-screen bg-white text-gray-900">
 
   <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-3 gap-12 items-center">
+  <section class="max-w-5xl mx-auto px-6 py-10 md:py-16">
+    <div class="md:grid md:grid-cols-3 md:items-center md:gap-12">
 
-      <div class="md:col-span-2 space-y-6">
+      <!-- Desktop-only pfp on the right column -->
+      <div class="hidden md:flex md:order-2 md:col-span-1 justify-center">
+        <img src="img/pfp.png" alt="Jean profile photo" class="w-64 h-64 rounded-full object-cover shadow-lg" />
+      </div>
+
+      <div class="md:order-1 md:col-span-2 space-y-6">
 
         <div>
-          <h1 class="text-5xl font-bold tracking-tight">Jean-Milan Albarede</h1>
+          <!-- Name row: on mobile the small pfp sits to the right of the name; hidden on desktop -->
+          <div class="flex items-center gap-4">
+            <h1 class="flex-1 min-w-0 text-4xl md:text-5xl font-bold tracking-tight">Jean-Milan Albarede</h1>
+            <img src="img/pfp.png" alt="Jean profile photo" class="md:hidden shrink-0 w-20 h-20 rounded-full object-cover shadow-lg" />
+          </div>
           <p class="text-xl text-gray-600 mt-3">
             B.S./M.S. Electrical Engineering @ Purdue University | 4+1 Program
           </p>
@@ -79,10 +88,6 @@
             </button>
           </div>
         </div>
-      </div>
-
-      <div class="flex justify-center">
-        <img src="img/pfp.png" alt="Jean profile photo" class="w-64 h-64 rounded-full object-cover shadow-lg" />
       </div>
 
     </div>
@@ -200,7 +205,6 @@
           </div>
         </button>
 
-        <!-- High-Voltage Langmuir Probe Bias Supply — hidden for now; un-comment to re-enable.
         <button type="button" data-project="newproject"
                 class="project-card group w-full text-left bg-white rounded-3xl p-8 shadow-sm border border-gray-200 cursor-pointer transition-all duration-200 hover:bg-blue-50/40 hover:border-blue-200 hover:shadow-md hover:ring-1 hover:ring-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
           <div class="flex flex-col md:flex-row md:items-start gap-6">
@@ -227,15 +231,14 @@
 
             <div class="w-full md:w-72">
               <div class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm h-56 group-hover:border-blue-200 transition-colors">
-                <img src="img/PulseGenPCBRend.png" alt="Render of Custom PCB designed in Altium" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                <img src="img/Flyback Prototype.jpeg" alt="Flyback converter prototype on protoboard" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
                 <div class="absolute inset-x-0 bottom-0 bg-black/50 p-3 text-white text-sm">
-                  Render of Custom PCB designed in Altium
+                  Flyback converter prototype on protoboard
                 </div>
               </div>
             </div>
           </div>
         </button>
-        -->
 
       </div>
     </div>
@@ -848,7 +851,7 @@
         slug: 'new-project',
         title: 'High-Voltage Langmuir Probe Bias Supply',
         subtitle: 'UCLA BaPSF Research · Experimental Hardware',
-        description: 'Developed an isolated high-voltage flyback supply for biasing a Langmuir probe used in plasma diagnostics at UCLA\u2019s Basic Plasma Science Facility. The project progressed from circuit and transformer design through hands-on prototyping, custom PCB fabrication, and bench characterization, with particular attention to high-voltage operation, switching behavior, and minimizing electrical interference during experimental measurements.',
+        description: 'Developed an isolated high-voltage flyback supply for biasing a Langmuir probe used in ion saturation plasma diagnostics at UCLA\u2019s Basic Plasma Science Facility. The project progressed from circuit and transformer design through hands-on prototyping, custom PCB fabrication, and bench characterization, with particular attention to high-voltage operation, switching behavior, and minimizing electrical interference during experimental measurements.',
         highlights: [
           'Designed an isolated flyback architecture providing an adjustable high-voltage output for Langmuir probe biasing, including triggered shutdown and energy storage to reduce interference during data acquisition.',
           'Hand-wound the flyback transformer and characterized its inductance and behavior across frequency using an LCR meter.',
@@ -858,12 +861,15 @@
           'Iterated the hardware based on measured prototype behavior before progressing toward the PCB implementation.',
         ],
         images: [
-          { src: 'img/CleanPCBRend.png', alt: 'Render of Custom PCB designed in Altium', caption: 'Render of Custom PCB designed in Altium' },
-          { src: 'img/BoardIRLCleanBrnd.png', alt: 'Assembled custom pulse generator PCB', caption: 'Assembled custom pulse generator PCB' },
-          { src: 'img/pulseProjectThm.jpg', alt: 'FPGA pulse timing setup with oscilloscope and wave generator', caption: 'FPGA tested with oscilloscope and wave generator' },
+          { src: 'img/Flyback Prototype.jpeg', alt: 'Flyback converter prototype on protoboard', caption: 'Flyback converter prototype on protoboard' },
+          { src: 'img/breakoutp1.jpg', alt: 'Custom breakout PCB — front', caption: 'Custom breakout PCB (front)' },
+          { src: 'img/breakoutp2.jpg', alt: 'Custom breakout PCB — back', caption: 'Custom breakout PCB (back)' },
+          { src: 'img/LCR Testing.jpeg', alt: 'Hand-wound transformer under LCR-meter characterization', caption: 'Hand-wound transformer characterized with an LCR meter' },
+          { src: 'img/ThermalTesting.jpeg', alt: 'Thermal camera measurement during converter operation', caption: 'Thermal-camera measurement during converter operation' },
+          { src: 'img/FlybackAltiumSchem.jpg', alt: 'Altium Schematic Capture (In Progress)', caption: 'Altium Schematic Capture (In Progress)' },
+          { src: 'img/labMain.jpeg', alt: 'Lab in which project will be used', caption: 'Lab in which project will be used' },
         ],
         tags: ['Power Electronics', 'Flyback Converter', 'Altium Designer', 'PCB Design', 'Hardware Prototyping', 'Transformer Design'],
-        github: 'https://github.com/jeanAlbarede/BaPSF-FPGA-Time-Pulsing',
       },
     };
 
@@ -993,7 +999,13 @@
       ).join('');
 
       const linkEl = document.getElementById('projectModalLink');
-      linkEl.href = project.github;
+      if (project.github) {
+        linkEl.href = project.github;
+        linkEl.classList.remove('hidden');
+      } else {
+        linkEl.removeAttribute('href');
+        linkEl.classList.add('hidden');
+      }
 
       projectModal.classList.remove('hidden');
       lockBodyScroll();
